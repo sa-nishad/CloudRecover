@@ -13,9 +13,9 @@ resource "aws_cloudwatch_metric_alarm" "primary_health" {
     aws_sns_topic.route53_health_alerts[0].arn
   ]
 
-  period              = 60
-  evaluation_periods  = 2
-  datapoints_to_alarm = 2
+  period              = 20
+  evaluation_periods  = 1
+  datapoints_to_alarm = 1
 
   threshold           = 1
   comparison_operator = "LessThanThreshold"
