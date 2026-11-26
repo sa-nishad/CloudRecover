@@ -345,7 +345,7 @@ The workflow can also be run in a planning mode before applying changes. Review 
 
 This project demonstrates recovery into the secondary region. Returning service to the original primary region after new writes have occurred in recovery requires a deliberate data synchronization and cutback procedure. Simply changing DNS back would risk losing writes made against the recovered database.
 
-A fully automated failback process is not claimed as part of the current implementation.
+A fully automated failback process is not claimed as part of the current implementation. A proposed, untested failback procedure is documented in [docs/failback-procedure.md](docs/failback-procedure.md).
 
 ---
 
