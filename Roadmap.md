@@ -141,6 +141,14 @@ Note: Stock adjustment logic, movement history, and automated tests remain defer
 - [ ] Add screenshots and a project demonstration.
 - [ ] Update the GitHub README and portfolio.
 
+## Phase 12 — Failback Design (Open Questions)
+
+Tracked from [docs/failback-procedure.md](docs/failback-procedure.md).
+
+- [ ] Decide whether failback restores into a new database instance and swaps, or restores over the existing primary resources, and how each interacts with Terraform state.
+- [ ] Determine how long a write freeze users can tolerate, informed by the measured RTO and RPO.
+- [ ] Decide whether to automate failback as a separate GitHub Actions workflow with a manual approval gate.
+
 ## Definition of Done
 
 CloudRecover is complete when the primary environment can serve the inventory API, monitor application and infrastructure health, and create recoverable database backups in another AWS Region.
